@@ -71,3 +71,10 @@ Los textos editables están centralizados en `src/data/`:
 
 `public/carta.pdf` — las 4 cards de especialidades enlazan a este archivo.
 Para actualizarla, reemplazar el PDF y volver a desplegar.
+
+## Decisiones que no se re-discuten
+
+- **Dominio-agnóstico a propósito**: `base: './'` en vite.config.js y rutas relativas. No meter URLs absolutas al propio sitio; conectar un dominio nuevo es solo agregar un custom domain en Cloudflare. Verificación: buscar `nuevoalcala.com`, `hostinger` y `storage.googleapis` en `src/`, `public/` e `index.html` tiene que dar cero resultados.
+- **URL definitiva: nuevo-alcala.pages.dev.** El 25/08/2026 jvx decidió no usar un subdominio propio (tipo nuevoalcala.jperez.pro). No re-proponerlo.
+- Las imágenes de `public/images/` son las únicas copias: el bucket de Hostinger ya las borró.
+- `public/googleabe61ebe07f71534.html` verifica la propiedad en Search Console: no borrarlo.
